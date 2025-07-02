@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 *{
     padding: 0px;
@@ -7,23 +7,101 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-family: "Fraunces";
-}
-
-header img {
+    position: relative;
+    height: 100vh;
     width: 100vw;
+    font-family: "Josefin Sans";
+    background-image: url(images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left; 
+    background-attachment: fixed;
 }
 
-main {
+section.card{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    height: 600px;
+    background-color: rgba(250, 235, 215, 0.397);
+    gap: 20px;
+    padding: 10px;
+}
+
+.todo {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.todo h1 {
+    color: white;
+}
+
+.inputs, .lista{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    padding: 0px 20px;
+    border-radius: 4px;
+}
+
+input[type="text"]{
+    width: 100%;
+    border-style: none;
+    outline: none;
+}
+
+input[type="checkbox"]  {
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 18px;
+    border: 1px solid hsl(235, 19%, 35%);
+    cursor: pointer;
+    
+}
+
+input[type="checkbox"]:checked {
+    background-image: url(images/icon-check.svg),linear-gradient(120deg ,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-repeat: no-repeat;
+    background-position: center center ;
+    border: none;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+input[type="submit"]{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: hsl(220, 98%, 61%);
+}
+
+input[type="submit"]::selection{
+    color: hsl(220, 98%, 61%);
 }
 
 .attribution {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    padding: 10px;
     font-size: 11px;
     text-align: center;
 }
