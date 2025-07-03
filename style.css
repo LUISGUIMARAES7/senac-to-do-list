@@ -16,19 +16,20 @@ body {
     background-size: contain;
     background-position: top left; 
     background-attachment: fixed;
+    color: hsl(235, 19%, 35%);
 }
 
 section.card{
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -40%);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 400px;
-    height: 600px;
-    background-color: rgba(250, 235, 215, 0.397);
+    width: 600px;
+    height: auto;
+    /* background-color: rgba(250, 235, 215, 0.397); */
     gap: 20px;
     padding: 10px;
 }
@@ -44,31 +45,34 @@ section.card{
     color: white;
 }
 
-.inputs, .lista{
+#imgTrocarTema {
+    cursor: pointer;
+}
+
+.inputs{
     display: flex;
-    align-items: center;
     gap: 10px;
-    height: 50px;
     width: 100%;
     background-color: white;
-    padding: 0px 20px;
+    padding: 10px;
     border-radius: 4px;
 }
 
 input[type="text"]{
-    width: 100%;
+    width: 90%;
     border-style: none;
     outline: none;
+    background-color: transparent;
 }
 
 input[type="checkbox"]  {
     appearance: none;
     border-radius: 50%;
     width: 20px;
-    height: 18px;
+    height: 20px;
     border: 1px solid hsl(235, 19%, 35%);
     cursor: pointer;
-    
+    background-color: transparent;
 }
 
 input[type="checkbox"]:checked {
@@ -78,24 +82,63 @@ input[type="checkbox"]:checked {
     border: none;
 }
 
+.card2{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px 0px;
+    border-radius: 4px;
+    gap: 10px;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+
+ul {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   list-style-type: none;
+
+}
+
+li {
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 1px solid ;
+    padding-bottom: 10px;
+}
+
+
 .actions {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100%;
     gap: 10px;
+    padding: 10px;
 }
 
 input[type="submit"]{
     background: none;
     border: none;
     cursor: pointer;
+    color: hsl(235, 19%, 35%);
+    font-weight: 600;
+}
+
+input[type="submit"]:active{
     color: hsl(220, 98%, 61%);
 }
 
-input[type="submit"]::selection{
-    color: hsl(220, 98%, 61%);
-}
 
 .attribution {
     position: absolute;
@@ -109,3 +152,23 @@ input[type="submit"]::selection{
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+
+/* MUDAR TEMA  */
+
+.tema-claro {
+    background-color: white;
+    color: hsl(235, 19%, 35%);
+}
+
+.tema-escuro {
+    background-color: hsl(235, 21%, 11%);
+    background-image: url(images/bg-desktop-dark.jpg);
+    color: hsl(236, 33%, 92%);
+}
+
+.tema-escuro .inputs, .tema-escuro .card2 {
+    background-color: hsl(235, 24%, 19%);
+}
+
+
